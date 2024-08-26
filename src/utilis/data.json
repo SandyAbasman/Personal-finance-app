@@ -1,63 +1,137 @@
 {
-    "current_balance": 2500.00,
-    "total_expenses": 1750.25,
-    "income": {
-      "salary": 4000.00,
-      "freelance": 500.00,
-      "other": 200.00,
-      "total_income": 4700.00
+  "current_balance": 2500.0,
+  "total_expenses": 1750.25,
+  "income": {
+    "salary": 4000.0,
+    "freelance": 500.0,
+    "other": 200.0,
+    "total_income": 4700.0
+  },
+  "budget": {
+    "groceries": 500.0,
+    "utilities": 300.0,
+    "entertainment": 200.0,
+    "transportation": 150.0,
+    "savings": 1000.0,
+    "total_budget": 2150.0
+  },
+  "transactions": [
+    { "name": "Grocery Store", "amount": 50.0, "date": "2024-08-01", "category": "Groceries" },
+    { "name": "Electric Bill", "amount": 100.0, "date": "2024-08-02", "category": "Utilities" },
+    { "name": "Coffee Shop", "amount": 8.75, "date": "2024-08-03", "category": "Dining" },
+    { "name": "Online Shopping", "amount": 120.5, "date": "2024-08-04", "category": "Shopping" },
+    { "name": "Gym Membership", "amount": 45.0, "date": "2024-08-05", "category": "Fitness" },
+    { "name": "Movie Theater", "amount": 15.0, "date": "2024-08-06", "category": "Entertainment" },
+    { "name": "Gas Station", "amount": 30.0, "date": "2024-08-07", "category": "Transportation" },
+    { "name": "Pharmacy", "amount": 25.0, "date": "2024-08-08", "category": "Healthcare" },
+    { "name": "Water Bill", "amount": 60.0, "date": "2024-08-09", "category": "Utilities" },
+    { "name": "Restaurant", "amount": 70.0, "date": "2024-08-10", "category": "Dining" },
+    { "name": "Pet Supplies", "amount": 40.0, "date": "2024-08-11", "category": "Pet Care" },
+    { "name": "Clothing Store", "amount": 150.0, "date": "2024-08-12", "category": "Shopping" },
+    { "name": "Internet Bill", "amount": 55.0, "date": "2024-08-13", "category": "Utilities" },
+    { "name": "Bookstore", "amount": 20.0, "date": "2024-08-14", "category": "Education" },
+    { "name": "Hair Salon", "amount": 35.0, "date": "2024-08-15", "category": "Personal Care" },
+    { "name": "Ride Sharing", "amount": 25.0, "date": "2024-08-16", "category": "Transportation" },
+    {
+      "name": "Streaming Service",
+      "amount": 12.99,
+      "date": "2024-08-17",
+      "category": "Entertainment"
     },
-    "budget": {
-      "groceries": 500.00,
-      "utilities": 300.00,
-      "entertainment": 200.00,
-      "transportation": 150.00,
-      "savings": 1000.00,
-      "total_budget": 2150.00
+    { "name": "Electricity Bill", "amount": 110.0, "date": "2024-08-18", "category": "Utilities" },
+    { "name": "Grocery Store", "amount": 70.0, "date": "2024-08-19", "category": "Groceries" },
+    { "name": "Gym Membership", "amount": 45.0, "date": "2024-08-20", "category": "Fitness" },
+    { "name": "Taxi Fare", "amount": 15.0, "date": "2024-08-21", "category": "Transportation" },
+    { "name": "Fast Food", "amount": 10.0, "date": "2024-08-22", "category": "Dining" },
+    { "name": "Cable Bill", "amount": 85.0, "date": "2024-08-23", "category": "Utilities" },
+    {
+      "name": "Concert Tickets",
+      "amount": 120.0,
+      "date": "2024-08-24",
+      "category": "Entertainment"
     },
-    "transactions": [
-      { "name": "Grocery Store", "amount": 50.00, "date": "2024-08-01", "category": "Groceries" },
-      { "name": "Electric Bill", "amount": 100.00, "date": "2024-08-02", "category": "Utilities" },
-      { "name": "Coffee Shop", "amount": 8.75, "date": "2024-08-03", "category": "Dining" },
-      { "name": "Online Shopping", "amount": 120.50, "date": "2024-08-04", "category": "Shopping" },
-      { "name": "Gym Membership", "amount": 45.00, "date": "2024-08-05", "category": "Fitness" },
-      { "name": "Movie Theater", "amount": 15.00, "date": "2024-08-06", "category": "Entertainment" },
-      { "name": "Gas Station", "amount": 30.00, "date": "2024-08-07", "category": "Transportation" },
-      { "name": "Pharmacy", "amount": 25.00, "date": "2024-08-08", "category": "Healthcare" },
-      { "name": "Water Bill", "amount": 60.00, "date": "2024-08-09", "category": "Utilities" },
-      { "name": "Restaurant", "amount": 70.00, "date": "2024-08-10", "category": "Dining" },
-      { "name": "Pet Supplies", "amount": 40.00, "date": "2024-08-11", "category": "Pet Care" },
-      { "name": "Clothing Store", "amount": 150.00, "date": "2024-08-12", "category": "Shopping" },
-      { "name": "Internet Bill", "amount": 55.00, "date": "2024-08-13", "category": "Utilities" },
-      { "name": "Bookstore", "amount": 20.00, "date": "2024-08-14", "category": "Education" },
-      { "name": "Hair Salon", "amount": 35.00, "date": "2024-08-15", "category": "Personal Care" },
-      { "name": "Ride Sharing", "amount": 25.00, "date": "2024-08-16", "category": "Transportation" },
-      { "name": "Streaming Service", "amount": 12.99, "date": "2024-08-17", "category": "Entertainment" },
-      { "name": "Electricity Bill", "amount": 110.00, "date": "2024-08-18", "category": "Utilities" },
-      { "name": "Grocery Store", "amount": 70.00, "date": "2024-08-19", "category": "Groceries" },
-      { "name": "Gym Membership", "amount": 45.00, "date": "2024-08-20", "category": "Fitness" },
-      { "name": "Taxi Fare", "amount": 15.00, "date": "2024-08-21", "category": "Transportation" },
-      { "name": "Fast Food", "amount": 10.00, "date": "2024-08-22", "category": "Dining" },
-      { "name": "Cable Bill", "amount": 85.00, "date": "2024-08-23", "category": "Utilities" },
-      { "name": "Concert Tickets", "amount": 120.00, "date": "2024-08-24", "category": "Entertainment" },
-      { "name": "Pharmacy", "amount": 18.00, "date": "2024-08-25", "category": "Healthcare" },
-      { "name": "Online Subscription", "amount": 9.99, "date": "2024-08-26", "category": "Entertainment" },
-      { "name": "Home Supplies", "amount": 50.00, "date": "2024-08-27", "category": "Shopping" },
-      { "name": "Taxi Fare", "amount": 20.00, "date": "2024-08-28", "category": "Transportation" },
-      { "name": "Coffee Shop", "amount": 5.50, "date": "2024-08-29", "category": "Dining" },
-      { "name": "Grocery Store", "amount": 45.00, "date": "2024-08-30", "category": "Groceries" }
-    ],
-    "recurring_bills": [
-      { "name": "Rent", "amount": 1200.00, "due_date": "2024-08-01", "frequency": "Monthly", "category": "Housing" },
-      { "name": "Electric Bill", "amount": 100.00, "due_date": "2024-08-05", "frequency": "Monthly", "category": "Utilities" },
-      { "name": "Internet Bill", "amount": 55.00, "due_date": "2024-08-10", "frequency": "Monthly", "category": "Utilities" },
-      { "name": "Gym Membership", "amount": 45.00, "due_date": "2024-08-15", "frequency": "Monthly", "category": "Fitness" },
-      { "name": "Water Bill", "amount": 60.00, "due_date": "2024-08-20", "frequency": "Monthly", "category": "Utilities" },
-      { "name": "Streaming Service", "amount": 12.99, "due_date": "2024-08-22", "frequency": "Monthly", "category": "Entertainment" },
-      { "name": "Car Insurance", "amount": 75.00, "due_date": "2024-08-25", "frequency": "Monthly", "category": "Insurance" },
-      { "name": "Cable Bill", "amount": 85.00, "due_date": "2024-08-28", "frequency": "Monthly", "category": "Utilities" },
-      { "name": "Phone Bill", "amount": 45.00, "due_date": "2024-08-30", "frequency": "Monthly", "category": "Utilities" },
-      { "name": "Health Insurance", "amount": 200.00, "due_date": "2024-08-31", "frequency": "Monthly", "category": "Insurance" }
-    ]
-  }
-  
+    { "name": "Pharmacy", "amount": 18.0, "date": "2024-08-25", "category": "Healthcare" },
+    {
+      "name": "Online Subscription",
+      "amount": 9.99,
+      "date": "2024-08-26",
+      "category": "Entertainment"
+    },
+    { "name": "Home Supplies", "amount": 50.0, "date": "2024-08-27", "category": "Shopping" },
+    { "name": "Taxi Fare", "amount": 20.0, "date": "2024-08-28", "category": "Transportation" },
+    { "name": "Coffee Shop", "amount": 5.5, "date": "2024-08-29", "category": "Dining" },
+    { "name": "Grocery Store", "amount": 45.0, "date": "2024-08-30", "category": "Groceries" }
+  ],
+  "recurring_bills": [
+    {
+      "name": "Rent",
+      "amount": 1200.0,
+      "due_date": "2024-08-01",
+      "frequency": "Monthly",
+      "category": "Housing"
+    },
+    {
+      "name": "Electric Bill",
+      "amount": 100.0,
+      "due_date": "2024-08-05",
+      "frequency": "Monthly",
+      "category": "Utilities"
+    },
+    {
+      "name": "Internet Bill",
+      "amount": 55.0,
+      "due_date": "2024-08-10",
+      "frequency": "Monthly",
+      "category": "Utilities"
+    },
+    {
+      "name": "Gym Membership",
+      "amount": 45.0,
+      "due_date": "2024-08-15",
+      "frequency": "Monthly",
+      "category": "Fitness"
+    },
+    {
+      "name": "Water Bill",
+      "amount": 60.0,
+      "due_date": "2024-08-20",
+      "frequency": "Monthly",
+      "category": "Utilities"
+    },
+    {
+      "name": "Streaming Service",
+      "amount": 12.99,
+      "due_date": "2024-08-22",
+      "frequency": "Monthly",
+      "category": "Entertainment"
+    },
+    {
+      "name": "Car Insurance",
+      "amount": 75.0,
+      "due_date": "2024-08-25",
+      "frequency": "Monthly",
+      "category": "Insurance"
+    },
+    {
+      "name": "Cable Bill",
+      "amount": 85.0,
+      "due_date": "2024-08-28",
+      "frequency": "Monthly",
+      "category": "Utilities"
+    },
+    {
+      "name": "Phone Bill",
+      "amount": 45.0,
+      "due_date": "2024-08-30",
+      "frequency": "Monthly",
+      "category": "Utilities"
+    },
+    {
+      "name": "Health Insurance",
+      "amount": 200.0,
+      "due_date": "2024-08-31",
+      "frequency": "Monthly",
+      "category": "Insurance"
+    }
+  ]
+}
