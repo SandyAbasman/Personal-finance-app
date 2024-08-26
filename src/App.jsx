@@ -6,7 +6,7 @@ function App() {
     <div>
       <p>personal finance app</p>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
