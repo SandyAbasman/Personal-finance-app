@@ -1,11 +1,15 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
+import Overview from './pages/overview'
+import Transaction from './pages/transaction'
 
 function App() {
   return (
-    <div>
-      <p className="text-red-950 text-lg">Personal New finance app</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Overview />} />
+      <Route path="/transaction" element={<Transaction />} />
+    </Routes>
   )
 }
 
