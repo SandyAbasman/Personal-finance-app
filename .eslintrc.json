@@ -1,0 +1,37 @@
+{
+  "parserOptions": {
+    "ecmaVersion": "latest", // Use the latest ECMAScript version
+    "sourceType": "module", // Enable ES6 modules
+    "ecmaFeatures": {
+      "jsx": true // Enable JSX if you're using React
+    }
+  },
+  "plugins": ["react"],
+  "extends": [
+    "eslint:recommended", // Use ESLint's recommended rules
+    "plugin:react/recommended", // Use React-specific linting rules
+    "prettier"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true,
+    "jest": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically detect the React version
+    }
+  },
+  "rules": {
+    "no-console": [
+      2,
+      {
+        "allow": ["warn", "error"] // Allow console.warn and console.error
+      }
+    ],
+    "no-empty-function": 0, // Allow empty functions
+    "no-use-before-define": 0, // Disable no-use-before-define rule
+    "indent": 0 // Disable the indent rule
+  }
+}

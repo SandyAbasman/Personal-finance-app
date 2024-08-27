@@ -1,11 +1,12 @@
-import "./App.css";
+import React from 'react'
+import './App.css'
 
 function App() {
   return (
     <div>
-      <p className="h-1 text-red-800">personal finance app </p>
+      <p className="text-red-950 text-lg">Personal New finance app</p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
