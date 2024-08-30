@@ -32,6 +32,7 @@
     ],
     "no-empty-function": 0, // Allow empty functions
     "no-use-before-define": 0, // Disable no-use-before-define rule
-    "indent": 0 // Disable the indent rule
+    "indent": 0, // Disable the indent rule
+    "react/prop-types": 0
   }
 }
