@@ -10,12 +10,12 @@ import Sidebar from './component/Sidebar'
 
 function App() {
   return (
-    <div className=" w-screen h-screen flex flex-row bg-background">
-      <div>
+    <div className=" w-screen  h-screen flex justify-start  flex-row">
+      <div className=" h-full">
         <Sidebar />
       </div>
 
-      <div>
+      <div className=" w-full bg-background p-4 h-full">
         <Routes>
           <Route path="/" element={<Overview />} />
           <Route path="/transaction" element={<Transaction />} />

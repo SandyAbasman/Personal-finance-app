@@ -29,7 +29,7 @@ export default function Sidebar() {
   return isOpen ? (
     <div
       className={
-        'w-60 h-full py-4 pb-8 px-1 flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white'
+        'w-full h-full py-4 pb-8 px-2 flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white'
       }
     >
       <div className=" w-[100%] font-light flex flex-col pr-2 gap-2   text-white/80">
