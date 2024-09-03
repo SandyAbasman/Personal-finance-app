@@ -27,7 +27,7 @@ export default function Pot() {
         </div>
 
         <div className=" w-1/2 h-auto grid gap-4 p-6 grid-cols-2 ">
-          {data.pots.map((pot) => {
+          {data.pots.slice(0, 4).map((pot) => {
             return (
               <div
                 key={pot.name}
