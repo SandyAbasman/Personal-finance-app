@@ -8,24 +8,9 @@ export default function Overview() {
     <div className="w-full h-auto flex flex-col gap-3 p-4">
       <h2 className="text-blue font-bold pb-8  text-2xl">Overview</h2>
       <div className=" flex flex-wrap  flex-row gap-6">
-        <CurrentBalance
-          bgColour={'blue'}
-          textColor={'white'}
-          heading="Current balance"
-          amount={data.balance.current}
-        />
-        <CurrentBalance
-          bgColour={'white'}
-          textColor={'blue'}
-          heading="Income"
-          amount={data.balance.income}
-        />
-        <CurrentBalance
-          bgColour={'white'}
-          textColor={'blue'}
-          heading="Income"
-          amount={data.balance.expenses}
-        />
+        <CurrentBalance heading="Current balance" amount={data.balance.current} />
+        <CurrentBalance heading="Income" amount={data.balance.income} />
+        <CurrentBalance heading="Income" amount={data.balance.expenses} />
       </div>
 
       <div className="w-1/2 h-auto">
