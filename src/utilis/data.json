@@ -425,25 +425,25 @@
       "name": "Savings",
       "target": 2000.0,
       "total": 159.0,
-      "theme": "green"
+      "theme": "#2F7266"
     },
     {
       "name": "Concert Ticket",
       "target": 150.0,
       "total": 110.0,
-      "theme": "navy"
+      "theme": "#615F6D"
     },
     {
       "name": "Gift",
       "target": 150.0,
       "total": 110.0,
-      "theme": "cyan"
+      "theme": "#87C7D2"
     },
     {
       "name": "New Laptop",
       "target": 1000.0,
       "total": 10.0,
-      "theme": "yellow"
+      "theme": "#CAB461"
     },
     {
       "name": "Holiday",
