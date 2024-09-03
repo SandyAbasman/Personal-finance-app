@@ -2,7 +2,6 @@ import React from 'react'
 import { IoMdArrowDropright } from 'react-icons/io'
 import data from '../utilis/data.json'
 import { LiaFileInvoiceDollarSolid } from 'react-icons/lia'
-import SmallPots from './SmallPots'
 
 export default function Pot() {
   return (
@@ -28,26 +27,18 @@ export default function Pot() {
         </div>
 
         <div className=" w-1/2 h-auto grid gap-4 p-6 grid-cols-2 ">
-          <SmallPots
-            name={data.pots[0].name}
-            total={data.pots[0].total}
-            theme={data.pots[0].theme}
-          />
-          <SmallPots
-            name={data.pots[1].name}
-            total={data.pots[1].total}
-            theme={data.pots[1].theme}
-          />
-          <SmallPots
-            name={data.pots[2].name}
-            total={data.pots[2].total}
-            theme={data.pots[2].theme}
-          />
-          <SmallPots
-            name={data.pots[3].name}
-            total={data.pots[3].total}
-            theme={data.pots[3].theme}
-          />
+          {data.pots.map((pot) => {
+            return (
+              <div
+                key={pot.name}
+                style={{ borderColor: pot.theme }}
+                className={`w-1/2 flex flex-col p-1 justify-between item-start gap-1   border-l-4  `}
+              >
+                <p className="text-blue/70 text-nowrap font-semibold  ">{pot.name}</p>
+                <p className="font-extrabold text-sm  text-blue">${pot.total}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>
