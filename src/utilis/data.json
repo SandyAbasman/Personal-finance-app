@@ -449,7 +449,7 @@
       "name": "Holiday",
       "target": 1440.0,
       "total": 531.0,
-      "theme": "purple"
+      "theme": "#ECCCAE"
     }
   ]
 }
