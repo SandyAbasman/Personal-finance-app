@@ -11,7 +11,7 @@ import Sidebar from './component/Sidebar'
 function App() {
   return (
     <div className=" w-screen  h-screen flex justify-start  flex-row">
-      <div className=" h-full">
+      <div className=" h-full hidden md:block">
         <Sidebar />
       </div>
 
