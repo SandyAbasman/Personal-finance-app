@@ -14,7 +14,7 @@ export default function Overview() {
         <Balance heading="Expenses" amount={data.balance.expenses} />
       </div>
       <div className="flex flex-row w-full h-auto ">
-        <div className="w-2/4 flex-col flex h-auto gap-6">
+        <div className="md:w-2/4 w-full flex-col flex h-auto gap-6">
           <Pot />
           <Transaction />
         </div>

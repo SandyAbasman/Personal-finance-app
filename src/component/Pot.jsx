@@ -5,10 +5,10 @@ import UpperBox from './UpperBox'
 
 export default function Pot() {
   return (
-    <div className="flex  flex-col justify-between gap-6  bg-white  p-6 rounded-lg">
+    <div className="flex  flex-col justify-between md:gap-6 gap-2 w-full h-auto  bg-white  p-6 rounded-lg">
       <UpperBox title="Pot" leftText="See Details" />
-      <div className="flex flex-row justify-between  gap-4 items-center w-full h-auto ">
-        <div className=" w-2/5 h-auto flex flex-row  bg-background justify-start rounded-lg items-center gap-4 py-6 p-2">
+      <div className="flex  flex-col  md:flex-row justify-between gap-4 items-center w-full h-auto ">
+        <div className="md:w-2/5 w-full h-auto flex flex-row  bg-background justify-start rounded-lg items-center gap-4 py-6 p-2">
           <i className="text-green">
             <LiaFileInvoiceDollarSolid size={50} />
           </i>
@@ -18,7 +18,7 @@ export default function Pot() {
           </div>
         </div>
 
-        <div className=" w-3/5 h-auto grid gap-4  grid-cols-2 ">
+        <div className=" md:w-3/5 w-full h-auto grid gap-4  grid-cols-2 ">
           {data.pots.slice(0, 4).map((pot) => {
             return (
               <div
