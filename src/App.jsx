@@ -15,7 +15,7 @@ function App() {
         <Sidebar />
       </div>
 
-      <div className=" w-full bg-background p-4 h-full">
+      <div className=" w-full  bg-background p-4 h-full">
         <Routes>
           <Route path="/" element={<Overview />} />
           <Route path="/transaction" element={<Transaction />} />
