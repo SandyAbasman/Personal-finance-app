@@ -9,15 +9,15 @@ export default function Transaction() {
 
       {data.transactions.slice(0, 5).map((trans) => {
         return (
-          <div key={trans.name} className="flex  justify-between flex-col item-center md:flex-row">
+          <div key={trans.name} className="flex  justify-between  item-center sm:gap-2 flex-row">
             <div className="flex flex-row justify-start gap-2 items-center">
               <img className="w-6 h-6 rounded-full" src={trans.avatar} alt={trans.name} />
               <p className="text-nowrap text-sm text-blue font-semibold">{trans.name}</p>
             </div>
 
-            <div className="flex md:flex-col flex-row gap-2 ">
-              <p className="text-xs font-semibold ">${trans.amount}</p>
-              <p className="text-xs text-blue/70">{trans.date}</p>
+            <div className="flex flex-col justify-start items-start md:gap-1 ">
+              <p className="text-xs font-bold ">${trans.amount}</p>
+              <p className="text-xs text-blue/50">date</p>
             </div>
           </div>
         )

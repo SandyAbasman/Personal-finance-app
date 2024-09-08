@@ -10,12 +10,12 @@ import Sidebar from './component/Sidebar'
 
 function App() {
   return (
-    <div className=" w-screen  h-screen flex justify-start  flex-row">
-      <div className=" h-full hidden md:block">
+    <div className=" w-screen h-auto flex   bg-background justify-start  flex-row">
+      <div className=" h-auto hidden md:block">
         <Sidebar />
       </div>
 
-      <div className=" w-full  bg-background p-4 h-full">
+      <div className=" w-full  p-2 h-auto">
         <Routes>
           <Route path="/" element={<Overview />} />
           <Route path="/transaction" element={<Transaction />} />
