@@ -20,7 +20,7 @@ export default function Overview() {
           <Transaction />
         </div>
 
-        <div className="flex flex-col border w-[40%] ">
+        <div className="flex flex-col w-[40%] ">
           <BudgetBox />
 
           {/* <RecurringBills/>  */}

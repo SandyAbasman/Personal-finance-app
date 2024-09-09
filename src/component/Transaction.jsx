@@ -17,7 +17,9 @@ export default function Transaction() {
             </div>
 
             <div className="flex flex-col justify-start items-start md:gap-1 ">
-              <p className="text-xs font-bold">
+              <p
+                className={`text-xs font-bold ${trans.amount > 0 ? 'text-[green]' : 'text-red-600'}`}
+              >
                 {trans.amount > 0 ? `+$${Math.abs(trans.amount)}` : `-$${Math.abs(trans.amount)}`}
               </p>
               <p className="text-xs text-blue/50">{dayjs(trans.date).format('DD MMM YYYY')}</p>
