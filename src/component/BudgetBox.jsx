@@ -13,9 +13,9 @@ defaults.plugins.legend.display = false
 
 export default function BudgetBox() {
   return (
-    <div className="flex  w-full flex-col justify-between md:gap-2 gap-2  h-auto  bg-white  p-6 rounded-lg">
+    <div className="flex w-full flex-col justify-between md:gap-2 gap-2  bg-white  p-6 rounded-lg">
       <UpperBox title="Budgets" leftText="See Details" />
-      <div className=" w-[60%] h-auto gap-4 flex flex-row justify-between items-center p-2">
+      <div className=" w-[60%] h-full  gap-4 flex flex-row justify-between items-center p-2">
         <Doughnut
           data={{
             labels: data.budgets.map((name) => name.category),

@@ -8,7 +8,7 @@ import RecurringBills from '../component/RecurringBills'
 
 export default function Overview() {
   return (
-    <div className="w-full h-auto flex flex-col gap-3 p-2">
+    <div className="w-full h-auto flex flex-col gap-3 p-4">
       <h2 className="text-blue font-bold mb-1  text-2xl">Overview</h2>
       <div className="  w-full h-auto flex md:flex-nowrap md:flex-row  flex-col gap-4">
         <Balance heading="Current balance" amount={data.balance.current} />
@@ -21,7 +21,7 @@ export default function Overview() {
           <Transaction />
         </div>
 
-        <div className="flex flex-col gap-3 w-[42%] ">
+        <div className="flex flex-col h-full justify-between gap-2 w-[45%] ">
           <BudgetBox />
           <RecurringBills />
         </div>
