@@ -4,6 +4,7 @@ import data from '../utilis/data.json'
 import Pot from '../component/Pot'
 import Transaction from '../component/Transaction'
 import BudgetBox from '../component/BudgetBox'
+import RecurringBills from '../component/RecurringBills'
 
 export default function Overview() {
   return (
@@ -14,16 +15,15 @@ export default function Overview() {
         <Balance heading="Income" amount={data.balance.income} />
         <Balance heading="Expenses" amount={data.balance.expenses} />
       </div>
-      <div className="flex md:flex-row  flex-col w-full h-auto gap-4 ">
-        <div className="md:w-[50%]  w-full flex-col flex h-auto gap-6">
+      <div className="flex md:flex-row  flex-col w-full h-auto gap-3 ">
+        <div className="md:w-[50%]  w-full flex-col flex h-auto gap-3">
           <Pot />
           <Transaction />
         </div>
 
-        <div className="flex flex-col w-[40%] ">
+        <div className="flex flex-col gap-3 w-[42%] ">
           <BudgetBox />
-
-          {/* <RecurringBills/>  */}
+          <RecurringBills />
         </div>
       </div>
     </div>
