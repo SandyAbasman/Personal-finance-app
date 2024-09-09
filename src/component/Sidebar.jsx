@@ -5,16 +5,18 @@ import { LuArrowDownUp } from 'react-icons/lu'
 import { GiWaterRecycling } from 'react-icons/gi'
 import { RiShieldFlashFill } from 'react-icons/ri'
 import { TbBrandCodesandbox } from 'react-icons/tb'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function NavLink({ icon, text }) {
+  const location = useLocation()
+  const { pathname } = location
+  let currentpath = pathname === '/' ? 'Overview' : pathname.substring(1)
   return (
     <div
-      className=" flex flex-rol gap-2 hover:cursor-pointer justify-start items-center  py-2 pr-8 pl-3  font-semibold  hover:rounded-tr-md hover:rounded-br-md  hover:bg-white hover:text-blue
-         "
+      className={`${text?.toLowerCase() == currentpath && 'bg-white text-blue'} flex flex-rol gap-2 hover:cursor-pointer justify-start items-center py-2 pr-8 pl-3 font-semibold hover:rounded-tr-md hover:rounded-br-md  hover:bg-white hover:text-blue`}
     >
       <span className="">{icon}</span>
-      <p className="text-sm text-nowrap ">{text}</p>
+      <p className="text-sm text-nowrap">{text}</p>
     </div>
   )
 }
@@ -39,8 +41,8 @@ export default function Sidebar() {
         <Link to="/">
           <NavLink icon={<MdHome />} text="Overview" />
         </Link>
-        <Link to="/transaction">
-          <NavLink icon={<LuArrowDownUp />} text="Transcation" />
+        <Link to="/transactions">
+          <NavLink icon={<LuArrowDownUp />} text="Transactions" />
         </Link>
         <Link to="/budgets">
           <NavLink icon={<GiWaterRecycling />} text="Budgets" />
@@ -48,7 +50,7 @@ export default function Sidebar() {
         <Link to="/pots">
           <NavLink icon={<RiShieldFlashFill />} text="Pots" />
         </Link>
-        <Link to="/recurringBills">
+        <Link to="/recurringbills">
           <NavLink icon={<TbBrandCodesandbox />} text="Recurring bills" />
         </Link>
       </div>
