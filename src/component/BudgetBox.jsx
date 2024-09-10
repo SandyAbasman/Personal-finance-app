@@ -15,23 +15,24 @@ export default function BudgetBox() {
   return (
     <div className="flex w-full flex-col justify-between md:gap-2 gap-2  bg-white  p-6 rounded-lg">
       <UpperBox title="Budgets" leftText="See Details" />
-      <div className=" w-[60%] h-full  gap-4 flex flex-row justify-between items-center p-2">
-        <Doughnut
-          data={{
-            labels: data.budgets.map((name) => name.category),
-            datasets: [
-              {
-                label: 'new',
-                data: data.budgets.map((amount) => amount.maximum),
-                backgroundColor: data.budgets.map((color) => color.theme),
-                borderColor: data.budgets.map((color) => color.theme),
-              },
-            ],
-            hoverOffset: 4,
-          }}
-        ></Doughnut>
 
-        <div className="  flex flex-col gap-4 p-2 ">
+      <div className="gap-10 flex flex-row justify-between items-center py-4 px-10">
+        <div className=" w-2/3 h-full  ">
+          <Doughnut
+            data={{
+              labels: data.budgets.map((name) => name.category),
+              datasets: [
+                {
+                  data: data.budgets.map((amount) => amount.maximum),
+                  backgroundColor: data.budgets.map((color) => color.theme),
+                  borderColor: data.budgets.map((color) => color.theme),
+                },
+              ],
+              hoverOffset: 4,
+            }}
+          ></Doughnut>
+        </div>
+        <div className=" w-1/2 flex flex-col gap-4 p-2 ">
           {data.budgets.slice(0, 5).map((legend) => {
             return (
               <div

@@ -24,7 +24,7 @@ export default function Pot() {
               <div
                 key={pot.name}
                 style={{ borderColor: pot.theme }}
-                className={`w-1/2 flex flex-col pl-2 justify-between item-start   border-l-4  `}
+                className={` flex flex-col pl-2 justify-between item-start   border-l-4  `}
               >
                 <p className="text-blue/70 text-nowrap text-sm font-semibold  ">{pot.name}</p>
                 <p className="font-extrabold text-xs  text-blue">${pot.total}</p>
