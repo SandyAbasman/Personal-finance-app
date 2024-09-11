@@ -13,9 +13,9 @@ function NavLink({ icon, text }) {
   let currentpath = pathname === '/' ? 'Overview' : pathname.substring(1)
   return (
     <div
-      className={`${text?.toLowerCase() == currentpath && 'bg-white text-blue'} flex flex-rol gap-2 hover:cursor-pointer justify-start items-center py-2 pr-8 pl-3 font-semibold hover:rounded-tr-md hover:rounded-br-md  hover:bg-white hover:text-blue`}
+      className={`${text?.toLowerCase() == currentpath && '  bg-white border-l-4 border-green text-blue'} flex flex-rol gap-2 hover:cursor-pointer justify-start items-center py-2 pr-10 hover:border-l-4 hover:border-green pl-3 font-semibold hover:rounded-tr-md hover:rounded-br-md  hover:bg-white hover:text-blue`}
     >
-      <span className="">{icon}</span>
+      <span className=" ">{icon}</span>
       <p className="text-sm text-nowrap">{text}</p>
     </div>
   )
@@ -31,10 +31,10 @@ export default function Sidebar() {
   return isOpen ? (
     <div
       className={
-        'w-full h-full py-4 pb-8 px-2 flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white'
+        'w-full h-full py-4 pb-8 px-4  flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white'
       }
     >
-      <div className=" w-[100%] font-light flex flex-col pr-2 gap-2   text-white/80">
+      <div className=" font-light flex flex-col pr-2 gap-2   text-white/80">
         {/* logo */}
         <h2 className="text-2xl p-4 text-white font-bold mb-2">Finance</h2>
         {/* Navigation links */}
@@ -66,7 +66,7 @@ export default function Sidebar() {
       </div>
     </div>
   ) : (
-    <div className="w-16 h-full py-16 pb-8 px-1  flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white">
+    <div className=" h-full py-16 pb-8 px-1  flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white">
       <div className=" w-[100%] font-light flex flex-col pr-2 gap-4   text-white/80">
         <Link to="/">
           <NavLink icon={<MdHome />} />

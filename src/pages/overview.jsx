@@ -10,7 +10,7 @@ export default function Overview() {
   return (
     <div className="w-full h-auto flex flex-col gap-3 p-4">
       <h2 className="text-blue font-bold mb-1  text-2xl">Overview</h2>
-      <div className="  w-full h-auto flex md:flex-nowrap justify-between gap-4 md:flex-row  flex-col ">
+      <div className="  w-full h-auto flex md:flex-nowrap justify-between gap-2 md:flex-row  flex-col ">
         <Balance heading="Current balance" amount={data.balance.current} />
         <Balance heading="Income" amount={data.balance.income} />
         <Balance heading="Expenses" amount={data.balance.expenses} />

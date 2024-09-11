@@ -10,7 +10,7 @@ export default function Transaction() {
 
       {data.transactions.slice(0, 5).map((trans) => {
         return (
-          <div key={trans.name} className="flex justify-between item-center sm:gap-2 flex-row">
+          <div key={trans.name} className="flex justify-between item-center sm:gap-2 p-2 flex-row">
             <div className="flex flex-row justify-start gap-2 items-center">
               <img className="w-6 h-6 rounded-full" src={trans.avatar} alt={trans.name} />
               <p className="text-nowrap text-sm text-blue font-semibold">{trans.name}</p>

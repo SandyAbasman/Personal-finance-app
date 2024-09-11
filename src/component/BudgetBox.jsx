@@ -17,7 +17,7 @@ export default function BudgetBox() {
       <UpperBox title="Budgets" leftText="See Details" />
 
       <div className="gap-10 flex flex-row justify-between items-center py-4 px-10">
-        <div className=" w-2/3 h-full  ">
+        <div className=" w-[70%] h-full  ">
           <Doughnut
             data={{
               labels: data.budgets.map((name) => name.category),
