@@ -11,8 +11,8 @@ import ErrorPage from './pages/404'
 
 function App() {
   return (
-    <div className=" w-screen h-auto flex   bg-background justify-start  flex-row">
-      <div className=" h-auto hidden md:block">
+    <div className=" w-screen h-screen flex   bg-background justify-start  flex-row">
+      <div className=" h-auto  hidden md:block">
         <Sidebar />
       </div>
 
