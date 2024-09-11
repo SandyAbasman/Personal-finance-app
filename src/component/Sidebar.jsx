@@ -10,7 +10,7 @@ import { Link, useLocation } from 'react-router-dom'
 function NavLink({ icon, text }) {
   const location = useLocation()
   const { pathname } = location
-  let currentpath = pathname === '/' ? 'Overview' : pathname.substring(1)
+  let currentpath = pathname === '/' ? 'overview' : pathname.substring(1)
   return (
     <div
       className={`${text?.toLowerCase() == currentpath && '  bg-white border-l-4 border-green text-blue'} flex flex-rol gap-2 hover:cursor-pointer justify-start items-center py-2 pr-10 hover:border-l-4 hover:border-green pl-3 font-semibold hover:rounded-tr-md hover:rounded-br-md  hover:bg-white hover:text-blue`}
