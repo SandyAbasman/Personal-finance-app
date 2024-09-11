@@ -7,6 +7,7 @@ import Budgets from './pages/budgets'
 import Pots from './pages/pots'
 import RecurringBills from './pages/recurringBills'
 import Sidebar from './component/Sidebar'
+import ErrorPage from './pages/404'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/budgets" element={<Budgets />} />
           <Route path="/pots" element={<Pots />} />
           <Route path="/recurringBills" element={<RecurringBills />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
     </div>
