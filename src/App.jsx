@@ -19,7 +19,7 @@ function App() {
       <div className=" w-full  p-2 h-auto">
         <Routes>
           <Route path="/" element={<Overview />} />
-          <Route path="/transaction" element={<Transaction />} />
+          <Route path="/transactions" element={<Transaction />} />
           <Route path="/budgets" element={<Budgets />} />
           <Route path="/pots" element={<Pots />} />
           <Route path="/recurringBills" element={<RecurringBills />} />

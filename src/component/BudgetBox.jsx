@@ -13,11 +13,11 @@ defaults.plugins.legend.display = false
 
 export default function BudgetBox() {
   return (
-    <div className="flex w-full flex-col justify-between md:gap-2 gap-2  bg-white  p-6 rounded-lg">
+    <div className=" h-auto flex w-full flex-col justify-between gap-250  bg-white  items-start self-stretch flex-1 p-400 rounded-lg">
       <UpperBox title="Budgets" leftText="See Details" />
 
-      <div className="gap-10 flex flex-row justify-between items-center py-4 px-10">
-        <div className=" w-[70%] h-full  ">
+      <div className="gap-[1rem] flex-1 flex flex-row justify-between items-center  self-stretch py-0 p-100">
+        <div className=" w-[240px] h-[240px] flex-shrink-0  ">
           <Doughnut
             data={{
               labels: data.budgets.map((name) => name.category),
@@ -32,7 +32,7 @@ export default function BudgetBox() {
             }}
           ></Doughnut>
         </div>
-        <div className=" w-1/2 flex flex-col gap-4 p-2 ">
+        <div className=" w-1/2 flex flex-col gap-200 item-start justify-center p-2 ">
           {data.budgets.slice(0, 5).map((legend) => {
             return (
               <div

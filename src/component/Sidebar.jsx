@@ -33,7 +33,7 @@ export default function Sidebar() {
   return isOpen ? (
     <div
       className={
-        ' h-full py-4 pb-8 px-2  flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white'
+        ' h-full py-4 pb-8 px-2  pr-300 flex  flex-col gap-300 justify-between items-start bg-blue rounded-tr-xl text-white'
       }
     >
       <div className=" font-light flex flex-col pr-2 gap-2   text-white/80">
