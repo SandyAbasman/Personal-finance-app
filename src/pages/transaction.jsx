@@ -1,5 +1,6 @@
 import React from 'react'
 import InputFieldTop from '../component/InputFieldTop'
+import TransactionTable from '../component/TransactionTable'
 
 export default function Transaction() {
   return (
@@ -10,6 +11,7 @@ export default function Transaction() {
 
       <div className=" w-full h-auto flex flex-col gap-300 md:px-400 md:py-400 px-300 py-250  items-start self-stretch bg-white rounded-lg">
         <InputFieldTop />
+        <TransactionTable />
       </div>
     </div>
   )
