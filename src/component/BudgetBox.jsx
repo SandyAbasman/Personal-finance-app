@@ -16,8 +16,8 @@ export default function BudgetBox() {
     <div className=" h-auto flex w-full flex-col justify-between gap-250  bg-white  items-start self-stretch flex-1 p-400 rounded-lg">
       <UpperBox title="Budgets" leftText="See Details" />
 
-      <div className="gap-[1rem] flex-1 flex md:flex-row flex-col justify-center md:justify-between items-center  self-stretch py-0 p-100">
-        <div className=" md:w-[240px] md:h-[240px] w-[150px] h-[150px] flex flex-col gap-[0.5rem] items-center self-stretch justify-center flex-shrink-0  ">
+      <div className="gap-[0.8rem] flex-1 flex md:flex-row flex-col justify-center md:justify-between items-center  self-stretch ">
+        <div className=" md:w-[60%] md:h-auto w-[150px] h-[150px] flex flex-col gap-[0.5rem] items-center self-stretch justify-center flex-shrink-0  ">
           <Doughnut
             data={{
               labels: data.budgets.map((name) => name.category),
@@ -32,18 +32,18 @@ export default function BudgetBox() {
             }}
           ></Doughnut>
         </div>
-        <div className=" md:flex md:flex-col grid gap-200 md:item-start md:item-center   md:justify-center w-full h-auto  grid-cols-2  ">
+        <div className=" md:flex md:flex-col grid gap-200 md:item-start    md:justify-center w-full h-auto  grid-cols-2  ">
           {data.budgets.slice(0, 5).map((legend) => {
             return (
               <div
                 key={legend.name}
                 style={{ borderColor: legend.theme }}
-                className={`flex flex-col pl-2 justify-between item-start gap-50 border-l-[4px]   `}
+                className={`flex flex-col  justify-center item-center gap-50 pl-150 border-l-[4px]   `}
               >
-                <p className="text-blue/60 text-nowrap text-xs font-semibold  ">
+                <p className="text-grey-300 text-nowrap text-[11px] font-[400]  ">
                   {legend.category}
                 </p>
-                <p className="font-extrabold text-xs  text-blue">${legend.maximum}</p>
+                <p className="font-[700] text-[12px]  text-grey-900">${legend.maximum}.00</p>
               </div>
             )
           })}

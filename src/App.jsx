@@ -12,7 +12,7 @@ import ErrorPage from './pages/404'
 function App() {
   return (
     <div className=" w-screen h-screen flex   bg-background justify-start  flex-row">
-      <div className="w-[300px] h-full hidden md:flex  ">
+      <div className=" h-full hidden md:flex  ">
         <Sidebar />
       </div>
 

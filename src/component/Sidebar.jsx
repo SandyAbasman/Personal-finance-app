@@ -33,7 +33,7 @@ export default function Sidebar() {
   return isOpen ? (
     <div
       className={
-        '  h-full pb-300  flex  w-full  flex-col gap-300   items-start bg-blue rounded-tr-xl text-white self-stretch'
+        '  h-full pb-300  flex  w-[300px]  flex-col gap-300   items-start bg-blue rounded-tr-xl text-white self-stretch'
       }
     >
       <div className=" pr-300 max-h-[800px] font-light flex flex-col ml-2  gap-50 flex-1   text-white/80">
