@@ -59,3 +59,5 @@ function Category() {
     </div>
   )
 }
+
+// to do : create the pagination component on the table
