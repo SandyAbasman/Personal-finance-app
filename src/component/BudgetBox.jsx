@@ -13,11 +13,11 @@ defaults.plugins.legend.display = false
 
 export default function BudgetBox() {
   return (
-    <div className="flex w-full flex-col justify-between md:gap-2 gap-2  bg-white  p-6 rounded-lg">
+    <div className="flex w-full flex-col justify-between gap-2 rounded-lg bg-white p-6 md:gap-2">
       <UpperBox title="Budgets" leftText="See Details" />
 
-      <div className="gap-10 flex flex-row justify-between items-center py-4 px-10">
-        <div className=" w-[70%] h-full  ">
+      <div className="flex flex-row items-center justify-between gap-10 px-10 py-4">
+        <div className="h-full w-[70%]">
           <Doughnut
             data={{
               labels: data.budgets.map((name) => name.category),
@@ -32,18 +32,16 @@ export default function BudgetBox() {
             }}
           ></Doughnut>
         </div>
-        <div className=" w-1/2 flex flex-col gap-4 p-2 ">
+        <div className="flex w-1/2 flex-col gap-4 p-2">
           {data.budgets.slice(0, 5).map((legend) => {
             return (
               <div
                 key={legend.name}
                 style={{ borderColor: legend.theme }}
-                className={`flex flex-col pl-2 justify-between item-start gap-1 border-l-4   `}
+                className={`item-start flex flex-col justify-between gap-1 border-l-4 pl-2`}
               >
-                <p className="text-blue/60 text-nowrap text-xs font-semibold  ">
-                  {legend.category}
-                </p>
-                <p className="font-extrabold text-xs  text-blue">${legend.maximum}</p>
+                <p className="text-nowrap text-xs font-semibold text-blue/60">{legend.category}</p>
+                <p className="text-xs font-extrabold text-blue">${legend.maximum}</p>
               </div>
             )
           })}

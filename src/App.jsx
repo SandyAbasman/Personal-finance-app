@@ -11,12 +11,12 @@ import ErrorPage from './pages/404'
 
 function App() {
   return (
-    <div className=" w-screen h-screen flex   bg-background justify-start  flex-row">
-      <div className=" h-auto  hidden md:block">
+    <div className="flex h-screen w-screen flex-row justify-start bg-background">
+      <div className="hidden h-auto md:block">
         <Sidebar />
       </div>
 
-      <div className=" w-full  p-2 h-auto">
+      <div className="h-auto w-full p-2">
         <Routes>
           <Route path="/" element={<Overview />} />
           <Route path="/transaction" element={<Transaction />} />

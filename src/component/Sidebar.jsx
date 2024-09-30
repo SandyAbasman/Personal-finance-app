@@ -15,10 +15,10 @@ function NavLink({ icon, text }) {
 
   return (
     <div
-      className={`${text?.toLowerCase() == currentpath && ' bg-white border-l-4 group   border-green text-blue'} flex flex-rol gap-2 group hover:cursor-pointer justify-start items-center py-2 pr-7 hover:border-l-4 hover:border-green pl-3 font-semibold rounded-tr-md rounded-br-md  hover:bg-white hover:text-blue`}
+      className={`${text?.toLowerCase() == currentpath && 'group border-l-4 border-green bg-white text-blue'} flex-rol group flex items-center justify-start gap-2 rounded-br-md rounded-tr-md py-2 pl-3 pr-7 font-semibold hover:cursor-pointer hover:border-l-4 hover:border-green hover:bg-white hover:text-blue`}
     >
       <span className="group-hover:text-green group-active:text-green">{icon}</span>
-      <p className="text-sm text-nowrap">{text}</p>
+      <p className="text-nowrap text-sm">{text}</p>
     </div>
   )
 }
@@ -33,12 +33,12 @@ export default function Sidebar() {
   return isOpen ? (
     <div
       className={
-        ' h-full py-4 pb-8 px-2  flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white'
+        'flex h-full flex-col items-start justify-between rounded-tr-xl bg-blue px-2 py-4 pb-8 text-white'
       }
     >
-      <div className=" font-light flex flex-col pr-2 gap-2   text-white/80">
+      <div className="flex flex-col gap-2 pr-2 font-light text-white/80">
         {/* logo */}
-        <h2 className="text-2xl p-4 text-white font-bold mb-2">Finance</h2>
+        <h2 className="mb-2 p-4 text-2xl font-bold text-white">Finance</h2>
         {/* Navigation links */}
         <Link to="/">
           <NavLink icon={<MdHome />} text="Overview" />
@@ -59,7 +59,7 @@ export default function Sidebar() {
 
       <div
         onClick={() => openNav()}
-        className="flex flex-rol text-white/80 gap-2 text-sm  hover:cursor-pointer justify-start items-center text-nowrap py-2 pr-14 pl-4  font-semibold  hover:rounded-tr-md hover:rounded-br-md  hover:bg-white hover:text-blue"
+        className="flex-rol flex items-center justify-start gap-2 text-nowrap py-2 pl-4 pr-14 text-sm font-semibold text-white/80 hover:cursor-pointer hover:rounded-br-md hover:rounded-tr-md hover:bg-white hover:text-blue"
       >
         <span>
           <PiArrowFatLineLeftFill />
@@ -68,8 +68,8 @@ export default function Sidebar() {
       </div>
     </div>
   ) : (
-    <div className=" h-full py-16 pb-8   flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white">
-      <div className="  font-light flex flex-col  gap-4   text-white/80">
+    <div className="flex h-full flex-col items-start justify-between rounded-tr-xl bg-blue py-16 pb-8 text-white">
+      <div className="flex flex-col gap-4 font-light text-white/80">
         <Link to="/">
           <NavLink icon={<MdHome />} />
         </Link>
@@ -89,7 +89,7 @@ export default function Sidebar() {
 
       <div
         onClick={() => openNav()}
-        className="flex flex-rol text-white/80 gap-2 text-sm  hover:cursor-pointer justify-start items-center text-nowrap py-2 pr-6 pl-4  font-semibold  hover:rounded-tr-md hover:rounded-br-md  hover:bg-white hover:text-blue"
+        className="flex-rol flex items-center justify-start gap-2 text-nowrap py-2 pl-4 pr-6 text-sm font-semibold text-white/80 hover:cursor-pointer hover:rounded-br-md hover:rounded-tr-md hover:bg-white hover:text-blue"
       >
         <span>
           <PiArrowFatLineRightFill />

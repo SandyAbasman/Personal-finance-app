@@ -5,18 +5,18 @@ import dayjs from 'dayjs'
 
 export default function Transaction() {
   return (
-    <div className="flex  flex-col justify-between gap-6  bg-white  p-6 rounded-lg">
+    <div className="flex flex-col justify-between gap-6 rounded-lg bg-white p-6">
       <UpperBox title="Transaction" leftText="View More" />
 
       {data.transactions.slice(0, 5).map((trans) => {
         return (
-          <div key={trans.name} className="flex justify-between item-center sm:gap-2 p-2 flex-row">
-            <div className="flex flex-row justify-start gap-2 items-center">
-              <img className="w-6 h-6 rounded-full" src={trans.avatar} alt={trans.name} />
-              <p className="text-nowrap text-sm text-blue font-semibold">{trans.name}</p>
+          <div key={trans.name} className="item-center flex flex-row justify-between p-2 sm:gap-2">
+            <div className="flex flex-row items-center justify-start gap-2">
+              <img className="h-6 w-6 rounded-full" src={trans.avatar} alt={trans.name} />
+              <p className="text-nowrap text-sm font-semibold text-blue">{trans.name}</p>
             </div>
 
-            <div className="flex flex-col justify-start items-start md:gap-1 ">
+            <div className="flex flex-col items-start justify-start md:gap-1">
               <p
                 className={`text-xs font-bold ${trans.amount > 0 ? 'text-[green]' : 'text-red-600'}`}
               >

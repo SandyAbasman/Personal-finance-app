@@ -3,9 +3,9 @@ import { IoMdArrowDropright } from 'react-icons/io'
 
 export default function UpperBox({ title, leftText }) {
   return (
-    <div className="flex flex-row justify-between items-center mt-1  ">
-      <h2 className="font-bold text-xl text-blue">{title}</h2>
-      <p className="text-nowrap text-sm flex flex-row justify-start items-center gap-1 hover:cursor-pointer hover:text-blue/30 font-semibold text-blue/50">
+    <div className="mt-1 flex flex-row items-center justify-between">
+      <h2 className="text-xl font-bold text-blue">{title}</h2>
+      <p className="flex flex-row items-center justify-start gap-1 text-nowrap text-sm font-semibold text-blue/50 hover:cursor-pointer hover:text-blue/30">
         {leftText}
         <span>
           <IoMdArrowDropright color="text-blue/70" />
