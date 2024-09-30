@@ -15,10 +15,10 @@ function NavLink({ icon, text }) {
 
   return (
     <div
-      className={`${text?.toLowerCase() == currentpath && ' bg-white border-l-4 group   border-green text-blue'} flex flex-rol gap-2 group hover:cursor-pointer justify-start items-center py-2 pr-7 hover:border-l-4 hover:border-green pl-3 font-semibold rounded-tr-md rounded-br-md  hover:bg-white hover:text-blue`}
+      className={`${text?.toLowerCase() == currentpath && ' bg-background border-l-4 group    border-green  text-blue'}  py-200 px-400 flex  flex-row justify-start  items-center   group hover:cursor-pointer    gap-200 hover:border-l-4  hover:border-green   rounded-tr-lg rounded-br-lg  hover:bg-background hover:text-blue`}
     >
-      <span className="group-hover:text-green group-active:text-green">{icon}</span>
-      <p className="text-sm text-nowrap">{text}</p>
+      <span className="group-hover:text-green  group-active:text-green">{icon}</span>
+      <p className="text-[1rem] font-[700] flex-1 text-nowrap">{text}</p>
     </div>
   )
 }
@@ -33,10 +33,10 @@ export default function Sidebar() {
   return isOpen ? (
     <div
       className={
-        ' h-full py-4 pb-8 px-2  flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white'
+        '  h-full pb-300  flex  w-full  flex-col gap-300   items-start bg-blue rounded-tr-xl text-white self-stretch'
       }
     >
-      <div className=" font-light flex flex-col pr-2 gap-2   text-white/80">
+      <div className=" pr-300 max-h-[800px] font-light flex flex-col ml-2  gap-50 flex-1   text-white/80">
         {/* logo */}
         <h2 className="text-2xl p-4 text-white font-bold mb-2">Finance</h2>
         {/* Navigation links */}
@@ -59,7 +59,7 @@ export default function Sidebar() {
 
       <div
         onClick={() => openNav()}
-        className="flex flex-rol text-white/80 gap-2 text-sm  hover:cursor-pointer justify-start items-center text-nowrap py-2 pr-14 pl-4  font-semibold  hover:rounded-tr-md hover:rounded-br-md  hover:bg-white hover:text-blue"
+        className="py-200 px-400 flex  flex-row justify-start  items-center   group hover:cursor-pointer    gap-200 hover:border-l-4  hover:border-green   rounded-tr-lg rounded-br-lg  hover:bg-background hover:text-blue"
       >
         <span>
           <PiArrowFatLineLeftFill />
