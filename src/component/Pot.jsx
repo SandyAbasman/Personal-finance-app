@@ -5,12 +5,12 @@ import UpperBox from './UpperBox'
 
 export default function Pot() {
   return (
-    <div className="flex  flex-col justify-between md:gap-6 gap-2 w-full h-auto  bg-white  p-6 rounded-lg">
+    <div className="flex  flex-col justify-between  gap-250 w-full h-auto item-start self-stretch  bg-white  p-400 rounded-lg">
       <UpperBox title="Pot" leftText="See Details" />
       <div className="flex  flex-col  md:flex-row justify-between gap-4 items-center w-full h-auto ">
         <div className="md:w-2/5 w-full h-auto flex flex-row  bg-background justify-start rounded-lg items-center gap-4 py-6 p-2">
           <i className="text-green">
-            <LiaFileInvoiceDollarSolid size={50} />
+            <LiaFileInvoiceDollarSolid size={40} />
           </i>
           <div className="flex flex-col justify-between gap-2 items-start">
             <p className=" text-blue/50 text-sm font-bold">Total Saved</p>
