@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import InputFieldTop from '../component/InputFieldTop'
+import TransactionTable from '../component/TransactionTable'
 import data from '../utilis/data.json'
 import ReactPaginate from 'react-paginate'
-import dayjs from 'dayjs'
 import { RiArrowDropRightFill, RiArrowDropLeftFill } from 'react-icons/ri'
 
 export default function Transaction() {
@@ -18,36 +19,16 @@ export default function Transaction() {
     setItemOffset(newOffset)
   }
 
-  function Items({ currentItems }) {
-    return (
-      <>
-        {currentItems &&
-          currentItems.map((ele, index) => (
-            <div key={index} className="flex items-center justify-between">
-              <div className="flex items-center justify-between gap-4">
-                <img className="w-6 h-6 rounded-full" src={ele.avatar} alt={ele.name} />
-                <div>
-                  <h3>{ele.name}</h3>
-                  <p className="text-xs text-blue/50">{ele.category}</p>
-                </div>
-              </div>
-              <div className="text-right">
-                <p
-                  className={`text-xs font-bold ${ele.amount > 0 ? 'text-[green]' : 'text-red-600'}`}
-                >
-                  {ele.amount > 0 ? `+$${Math.abs(ele.amount)}` : `-$${Math.abs(ele.amount)}`}
-                </p>
-                <p className="text-xs text-blue/50">{dayjs(ele.date).format('DD MMM YYYY')}</p>
-              </div>
-            </div>
-          ))}
-      </>
-    )
-  }
-
   return (
-    <div>
-      <Items currentItems={currentItems} />
+    <div className="w-full h-auto flex flex-col bg-background gap-400 md:px-400 md:py-500 px-300 py-200 flex-1">
+      <h2 className="text-grey-900 font-[700] md:w-full max-w-30 px-100 py-0 text-[32px] ">
+        Transaction
+      </h2>
+
+      <div className=" w-full h-auto flex flex-col gap-300 md:px-400 md:py-400 px-300 py-250 items-start self-stretch bg-white rounded-lg">
+        <InputFieldTop />
+        <TransactionTable currentItems={currentItems} />
+      </div>
       <ReactPaginate
         className="flex gap-x-2 justify-center relative my-4"
         pageClassName="flex items-center flex-col"
