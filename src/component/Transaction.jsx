@@ -5,10 +5,10 @@ import dayjs from 'dayjs'
 
 export default function Transaction() {
   return (
-    <div className="flex  flex-col justify-between gap-6  bg-white  p-6 rounded-lg">
+    <div className="flex  flex-col justify-between gap-6  bg-white h-auto p-6 rounded-lg">
       <UpperBox title="Transaction" leftText="View More" />
 
-      {data.transactions.slice(0, 5).map((trans) => {
+      {data.transactions.slice(0, 9).map((trans) => {
         return (
           <div key={trans.name} className="flex justify-between item-center sm:gap-2 p-2 flex-row">
             <div className="flex flex-row justify-start gap-2 items-center">

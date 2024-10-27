@@ -15,13 +15,13 @@ export default function Overview() {
         <Balance heading="Income" amount={data.balance.income} />
         <Balance heading="Expenses" amount={data.balance.expenses} />
       </div>
-      <div className="flex md:flex-row   flex-col w-full h-auto justify-between gap-3 ">
+      <div className="flex md:flex-row   flex-col w-full h-auto justify-start gap-3 ">
         <div className="md:w-[50%]  w-full flex-col flex h-auto gap-3">
           <Pot />
           <Transaction />
         </div>
 
-        <div className="flex flex-col h-full justify-between gap-2 w-[50%] ">
+        <div className="flex flex-col h-full w-1/2 justify-between gap-2 ">
           <BudgetBox />
           <RecurringBills />
         </div>
