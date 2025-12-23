@@ -7,18 +7,42 @@ import { RiShieldFlashFill } from 'react-icons/ri'
 import { TbBrandCodesandbox } from 'react-icons/tb'
 import { Link, useLocation } from 'react-router-dom'
 
-function NavLink({ icon, text }) {
+function NavLink({ icon, text, path }) {
   const location = useLocation()
-
   const { pathname } = location
-  let currentpath = pathname === '/' ? 'overview' : pathname.substring(1)
+
+  // Normalize paths for comparison
+  const normalizePath = (path) => path.toLowerCase().replace(/\s+/g, '')
+  const normalizeText = (text) => text?.toLowerCase().replace(/\s+/g, '') || ''
+
+  // Check if current path matches
+  const isActive =
+    pathname === path ||
+    (pathname === '/' && path === '/') ||
+    (pathname !== '/' && normalizePath(pathname.substring(1)) === normalizeText(text))
 
   return (
     <div
-      className={`${text?.toLowerCase() == currentpath && ' bg-white border-l-4 group   border-green text-blue'} flex flex-rol gap-2 group hover:cursor-pointer justify-start items-center py-2 pr-7 hover:border-l-4 hover:border-green pl-3 font-semibold rounded-tr-md rounded-br-md  hover:bg-white hover:text-blue`}
+      className={`${
+        isActive
+          ? 'bg-white border-l-4 border-green text-blue'
+          : 'text-white/80 hover:bg-white hover:text-blue hover:border-l-4 hover:border-green'
+      } flex flex-row gap-2 group hover:cursor-pointer justify-start items-center py-2 pr-7 pl-3 font-semibold rounded-tr-md rounded-br-md transition-all duration-200`}
     >
-      <span className="group-hover:text-green group-active:text-green">{icon}</span>
-      <p className="text-sm text-nowrap">{text}</p>
+      <span
+        className={`${isActive ? 'text-green' : 'text-white/80 group-hover:text-green'} transition-colors duration-200`}
+      >
+        {icon}
+      </span>
+      {text && (
+        <p
+          className={`text-sm text-nowrap transition-colors duration-200 ${
+            isActive ? 'text-blue' : 'text-white/80 group-hover:text-blue'
+          }`}
+        >
+          {text}
+        </p>
+      )}
     </div>
   )
 }
@@ -36,24 +60,24 @@ export default function Sidebar() {
         ' h-full py-4 pb-8 px-2  flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white'
       }
     >
-      <div className=" font-light flex flex-col pr-2 gap-2   text-white/80">
+      <div className="font-light flex flex-col pr-2 gap-2 text-white/80">
         {/* logo */}
         <h2 className="text-2xl p-4 text-white font-bold mb-2">Finance</h2>
         {/* Navigation links */}
-        <Link to="/">
-          <NavLink icon={<MdHome />} text="Overview" />
+        <Link to="/" className="w-full">
+          <NavLink icon={<MdHome />} text="Overview" path="/" />
         </Link>
-        <Link to="/transactions">
-          <NavLink icon={<LuArrowDownUp />} text="Transactions" />
+        <Link to="/transaction" className="w-full">
+          <NavLink icon={<LuArrowDownUp />} text="Transactions" path="/transaction" />
         </Link>
-        <Link to="/budgets">
-          <NavLink icon={<GiWaterRecycling />} text="Budgets" />
+        <Link to="/budgets" className="w-full">
+          <NavLink icon={<GiWaterRecycling />} text="Budgets" path="/budgets" />
         </Link>
-        <Link to="/pots">
-          <NavLink icon={<RiShieldFlashFill />} text="Pots" />
+        <Link to="/pots" className="w-full">
+          <NavLink icon={<RiShieldFlashFill />} text="Pots" path="/pots" />
         </Link>
-        <Link to="/recurringbills">
-          <NavLink icon={<TbBrandCodesandbox />} text="Recurring bills" />
+        <Link to="/recurringBills" className="w-full">
+          <NavLink icon={<TbBrandCodesandbox />} text="Recurring bills" path="/recurringBills" />
         </Link>
       </div>
 
@@ -69,21 +93,21 @@ export default function Sidebar() {
     </div>
   ) : (
     <div className=" h-full py-16 pb-8   flex  flex-col justify-between items-start bg-blue rounded-tr-xl text-white">
-      <div className="  font-light flex flex-col  gap-4   text-white/80">
-        <Link to="/">
-          <NavLink icon={<MdHome />} />
+      <div className="font-light flex flex-col gap-4 text-white/80">
+        <Link to="/" className="w-full">
+          <NavLink icon={<MdHome />} path="/" />
         </Link>
-        <Link to="/transaction">
-          <NavLink icon={<LuArrowDownUp />} />
+        <Link to="/transaction" className="w-full">
+          <NavLink icon={<LuArrowDownUp />} path="/transaction" />
         </Link>
-        <Link to="/budgets">
-          <NavLink icon={<GiWaterRecycling />} />
+        <Link to="/budgets" className="w-full">
+          <NavLink icon={<GiWaterRecycling />} path="/budgets" />
         </Link>
-        <Link to="/pots">
-          <NavLink icon={<RiShieldFlashFill />} />
+        <Link to="/pots" className="w-full">
+          <NavLink icon={<RiShieldFlashFill />} path="/pots" />
         </Link>
-        <Link to="/recurringBills">
-          <NavLink icon={<TbBrandCodesandbox />} />
+        <Link to="/recurringBills" className="w-full">
+          <NavLink icon={<TbBrandCodesandbox />} path="/recurringBills" />
         </Link>
       </div>
 

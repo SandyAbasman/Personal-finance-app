@@ -9,5 +9,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'DM Sans';
-  overflow-x: hidden;
+}
+
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
 }
